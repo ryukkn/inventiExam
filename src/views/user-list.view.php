@@ -40,6 +40,8 @@
                 </thead>
                 <tbody>
                 <?php
+                    
+                
                     foreach($users as $user){
                         echo "
                             <tr>"
@@ -65,6 +67,9 @@
                                     $user['created_at'] 
                                 ."</td>"                
                             ."</tr>";
+                    }
+                    if(count($users)<=0){
+                        echo "<tr><td colspan='7' class='text-center'>No user found</td></tr>";
                     }
                 ?>
                 </tbody>
